@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.input.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane fx:id="ChecksForm" prefHeight="545.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationanalyzer.FXControllers.ChecksController">
+   <children>
+      <BorderPane layoutX="-211.0" layoutY="-123.0" prefHeight="518.0" prefWidth="669.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+                <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="1151.0" BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu fx:id="menu_file" mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="New" />
+                                <MenuItem mnemonicParsing="false" text="Open…" />
+                                <Menu mnemonicParsing="false" text="Open Recent" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                                <MenuItem mnemonicParsing="false" text="Save" />
+                                <MenuItem mnemonicParsing="false" text="Save As…" />
+                                <MenuItem mnemonicParsing="false" text="Revert" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Preferences…" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleQuit" text="Quit" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Undo" />
+                                <MenuItem mnemonicParsing="false" text="Redo" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Cut" />
+                                <MenuItem mnemonicParsing="false" text="Copy" />
+                                <MenuItem mnemonicParsing="false" text="Paste" />
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Select All" />
+                                <MenuItem mnemonicParsing="false" text="Unselect All" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.7" BorderPane.alignment="CENTER">
+               <items>
+                  <AnchorPane fx:id="checksPane">
+                              </AnchorPane>
+                  <AnchorPane fx:id="checkParsSidePane" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane fx:id="checkParsPane" prefHeight="200.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="checkLovPane" prefHeight="200.0" prefWidth="200.0" />
+                           </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+               </items>
+            </SplitPane>
+         </center>
+         <bottom>
+                  <AnchorPane prefHeight="42.0" prefWidth="708.0" BorderPane.alignment="CENTER">
+                      <children>
+                          <Button fx:id="btnRunSuiteChecks" layoutX="666.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleRunSuiteChecks" text="Run Suite Checks" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="90.0" />
+                          <Button fx:id="btnSearchItems" mnemonicParsing="false" onAction="#searchData" text="Search" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="25.0" />
+                  <Button fx:id="btnCreateCheck" layoutX="554.0" layoutY="7.0" mnemonicParsing="false" onAction="#createCheck" prefHeight="25.0" prefWidth="99.0" text="Add Check" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="210.0" />
+                      </children>
+                  </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

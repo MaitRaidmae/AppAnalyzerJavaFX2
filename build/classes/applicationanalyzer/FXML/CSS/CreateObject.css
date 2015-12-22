@@ -1,0 +1,34 @@
+
+.minmax_check_pars_grid {
+    -fx-padding: 10;
+    -fx-hgap: 5;
+    -fx-vgap: 5;
+    -app-grid-col1-width: 100;
+    -app-grid-col2-width: 150;
+}
+
+.rpredict_check_pars_grid {
+    -fx-padding: 10;
+    -fx-hgap: 5;
+    -fx-vgap: 5;
+    -app-grid-col1-width: 100;
+    -app-grid-col2-width: 150;
+}
+
+.lov_check_pars_grid {
+    -fx-padding: 10;
+    -fx-hgap: 5;
+    -fx-vgap: 5;
+    -app-grid-col1-width: 100;
+    -app-grid-col2-width: 150;
+    -app-grid-hidden-cols: LCP_CODE, LCP_CHK_CODE;
+}
+
+.checks_grid {
+    -fx-padding: 10;
+    -fx-hgap: 5;
+    -fx-vgap: 5;
+    -app-grid-col1-width: 100;
+    -app-grid-col2-width: 150;
+    -app-grid-hidden-cols: CHK_CODE, CHK_CHS_CODE;
+}

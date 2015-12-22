@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.input.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="Applications" prefHeight="552.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationanalyzer.FXControllers.ApplicationsController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox prefHeight="860.0" prefWidth="1155.0" BorderPane.alignment="CENTER">
+                <children>
+                    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+                        <children>
+                            <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <children>
+                                    <AnchorPane fx:id="applicationsPane" VBox.vgrow="ALWAYS">
+                              </AnchorPane>
+                                    <HBox alignment="TOP_CENTER" prefHeight="25.0">
+                                        <children>
+                                            <TextField fx:id="resultsField" alignment="CENTER" minWidth="-Infinity" onAction="#updateResults" prefHeight="25.0" prefWidth="111.0" promptText="NumberOfResults" />
+                                        </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="25.0">
+                                        <children>
+                                            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0" text="Number of results">
+                                                <padding>
+                                                    <Insets right="5.0" />
+                                                </padding>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+                                    <Separator valignment="BOTTOM" />
+                                </children>
+                            </VBox>
+                        </children>
+                    </AnchorPane>
+                </children>
+            </VBox>
+         </center>
+         <top>
+              <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+                  <menus>
+                      <Menu fx:id="menu_file" mnemonicParsing="false" text="File">
+                          <items>
+                              <MenuItem mnemonicParsing="false" text="New" />
+                              <MenuItem mnemonicParsing="false" text="Open…" />
+                              <Menu mnemonicParsing="false" text="Open Recent" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" text="Close" />
+                              <MenuItem mnemonicParsing="false" text="Save" />
+                              <MenuItem mnemonicParsing="false" text="Save As…" />
+                              <MenuItem mnemonicParsing="false" text="Revert" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" text="Preferences…" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" onAction="#handleQuit" text="Quit" />
+                          </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                          <items>
+                              <MenuItem mnemonicParsing="false" text="Undo" />
+                              <MenuItem mnemonicParsing="false" text="Redo" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" text="Cut" />
+                              <MenuItem mnemonicParsing="false" text="Copy" />
+                              <MenuItem mnemonicParsing="false" text="Paste" />
+                              <MenuItem mnemonicParsing="false" text="Delete" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" text="Select All" />
+                              <MenuItem mnemonicParsing="false" text="Unselect All" />
+                          </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                          <items>
+                              <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                          </items>
+                      </Menu>
+                  </menus>
+              </MenuBar>
+         </top>
+         <bottom>
+                  <AnchorPane prefHeight="52.0" prefWidth="651.0" BorderPane.alignment="CENTER">
+                      <children>
+                          <Button fx:id="btn_getAppData" mnemonicParsing="false" onAction="#searchData" text="Search" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="45.0" />
+                          <Button fx:id="btn_viewSuits" layoutX="957.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleViewSuits" text="View Suits" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="125.0" />
+                          <Button fx:id="btn_viewImage" mnemonicParsing="false" onAction="#handleViewImage" text="View Image" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="215.0" />
+                      </children>
+                  </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
